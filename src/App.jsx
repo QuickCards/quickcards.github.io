@@ -1,8 +1,15 @@
 import PWABadge from "./PWABadge.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+
 function App() {
   return (
     <>
-      <div>Quick Cards</div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
       <PWABadge />
     </>
   );
